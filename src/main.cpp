@@ -6,23 +6,24 @@
 
 using namespace cv;
 using namespace std;
-int main(int, char**)
+int main(int argc, char* argv[])
 {
     Mat frame;
     //--- INITIALIZE VIDEOCAPTURE
-    VideoCapture cap;
+   
     // open the default camera using default API
     // cap.open(0);
     // OR advance usage: select any API backend
     int deviceID = 0;             // 0 = open default camera
     int apiID = cv::CAP_ANY;      // 0 = autodetect default API
     // open selected camera using selected API
-    cap.open(deviceID, apiID);
+
+    cout << getBuildInformation();
+
+    cout << "Using File " << argv[1] << endl;
+    VideoCapture cap(argv[1]);
     // check if we succeeded
-    if (!cap.isOpened()) {
-        cerr << "ERROR! Unable to open camera\n";
-        return -1;
-    }
+    
     //--- GRAB AND WRITE LOOP
     cout << "Start grabbing" << endl
         << "Press any key to terminate" << endl;
@@ -36,7 +37,11 @@ int main(int, char**)
             break;
         }
         // show live and wait for a key with timeout long enough to show images
+        
+      
         imshow("Live", frame);
+    
+
         if (waitKey(5) >= 0)
             break;
     }
