@@ -123,6 +123,33 @@ depend:
 	$(MAKE) -f CMakeFiles/./bin/BlazePlusPlus.dir/build.make CMakeFiles/./bin/BlazePlusPlus.dir/build
 .PHONY : ./bin/BlazePlusPlus/fast
 
+lib/glad/src/glad.o: lib/glad/src/glad.c.o
+
+.PHONY : lib/glad/src/glad.o
+
+# target to build an object file
+lib/glad/src/glad.c.o:
+	$(MAKE) -f CMakeFiles/./bin/BlazePlusPlus.dir/build.make CMakeFiles/./bin/BlazePlusPlus.dir/lib/glad/src/glad.c.o
+.PHONY : lib/glad/src/glad.c.o
+
+lib/glad/src/glad.i: lib/glad/src/glad.c.i
+
+.PHONY : lib/glad/src/glad.i
+
+# target to preprocess a source file
+lib/glad/src/glad.c.i:
+	$(MAKE) -f CMakeFiles/./bin/BlazePlusPlus.dir/build.make CMakeFiles/./bin/BlazePlusPlus.dir/lib/glad/src/glad.c.i
+.PHONY : lib/glad/src/glad.c.i
+
+lib/glad/src/glad.s: lib/glad/src/glad.c.s
+
+.PHONY : lib/glad/src/glad.s
+
+# target to generate assembly for a file
+lib/glad/src/glad.c.s:
+	$(MAKE) -f CMakeFiles/./bin/BlazePlusPlus.dir/build.make CMakeFiles/./bin/BlazePlusPlus.dir/lib/glad/src/glad.c.s
+.PHONY : lib/glad/src/glad.c.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -150,33 +177,6 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/./bin/BlazePlusPlus.dir/build.make CMakeFiles/./bin/BlazePlusPlus.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-usr/local/lib/glad/src/glad.o: usr/local/lib/glad/src/glad.c.o
-
-.PHONY : usr/local/lib/glad/src/glad.o
-
-# target to build an object file
-usr/local/lib/glad/src/glad.c.o:
-	$(MAKE) -f CMakeFiles/./bin/BlazePlusPlus.dir/build.make CMakeFiles/./bin/BlazePlusPlus.dir/usr/local/lib/glad/src/glad.c.o
-.PHONY : usr/local/lib/glad/src/glad.c.o
-
-usr/local/lib/glad/src/glad.i: usr/local/lib/glad/src/glad.c.i
-
-.PHONY : usr/local/lib/glad/src/glad.i
-
-# target to preprocess a source file
-usr/local/lib/glad/src/glad.c.i:
-	$(MAKE) -f CMakeFiles/./bin/BlazePlusPlus.dir/build.make CMakeFiles/./bin/BlazePlusPlus.dir/usr/local/lib/glad/src/glad.c.i
-.PHONY : usr/local/lib/glad/src/glad.c.i
-
-usr/local/lib/glad/src/glad.s: usr/local/lib/glad/src/glad.c.s
-
-.PHONY : usr/local/lib/glad/src/glad.s
-
-# target to generate assembly for a file
-usr/local/lib/glad/src/glad.c.s:
-	$(MAKE) -f CMakeFiles/./bin/BlazePlusPlus.dir/build.make CMakeFiles/./bin/BlazePlusPlus.dir/usr/local/lib/glad/src/glad.c.s
-.PHONY : usr/local/lib/glad/src/glad.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ./bin/BlazePlusPlus"
+	@echo "... lib/glad/src/glad.o"
+	@echo "... lib/glad/src/glad.i"
+	@echo "... lib/glad/src/glad.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... usr/local/lib/glad/src/glad.o"
-	@echo "... usr/local/lib/glad/src/glad.i"
-	@echo "... usr/local/lib/glad/src/glad.s"
 .PHONY : help
 
 
