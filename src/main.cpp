@@ -3,13 +3,13 @@
 #include <opencv2/highgui.hpp>
 #include <iostream>
 #include <stdio.h>
-#include <test_lib.h>
+#include <pose_tracker_3d.h>
 
 using namespace cv;
 using namespace std;
-using namespace test_lib;
+using namespace pose_tracker_3d;
 
 int main(int argc, char* argv[])
 {
-    MyClass::hello_world();
+    PoseTracker3D::hello_world();
 }
