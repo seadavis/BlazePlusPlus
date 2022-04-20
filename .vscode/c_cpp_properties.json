@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/usr/local/include/opencv4",
-                "${workspaceFolder}/lib/glad/include"
+                "${workspaceFolder}/lib/glad/include",
+                "/home/sdavis/CopiedRepos/mediapipe/mediapipe/lib/"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
